@@ -31,7 +31,7 @@
           if ($result = $connection->query($consulta)) {
 
               if ($result->num_rows===0) {
-                echo "LOGIN INVALIDO";
+                echo "REGISTRO INVÁLIDO";
               } else {
                 $_SESSION["user"]=$_POST["user"];
 
@@ -39,20 +39,18 @@
               }
 
           } else {
-            echo "Consulta Incorrecta";
+            echo "Nombre de usuario ya existente";
           }
       }
     ?>
 
-    <form action="login.php" method="post" style="text-align: center;">
+    <form action="register.php" method="post" style="text-align: center;">
 
-      <p><input name="user" required></p>
-      <p><input name="password" type="password" required></p>
-      <p><input type="submit" value="Iniciar Sesion"></p>
-
+      <p>Nombre de Usuario: <input name="user" required></p>
+      <p>Password: <input name="password" type="password" required></p>
+      <p>Fecha de Nacimiento: <input type="date" name="fecha"></p>
+      <p><input type="submit" value="Registrarse"></p>
     </form>
-
-
 
   </body>
 </html>
