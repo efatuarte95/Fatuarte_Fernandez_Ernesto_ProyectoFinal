@@ -94,7 +94,7 @@
       <div>
         <a href="lennon.php"><img src="../imagenes/solistas/lennon.jpeg"/></a>
         <a href="alboran.php"><img src="../imagenes/solistas/alboran.jpeg"/></a>
-        <a href="madonna.php"><img src="../imagenes/solistas/madonna.jpeg"/></a>
+        <a href="beatles.php"><img src="../imagenes/grupos/beatles.jpeg"/></a>
       </div>
       <div>
         <a href="coldplay.php"><img src="../imagenes/grupos/coldplay.jpeg"/></a>
