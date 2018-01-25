@@ -83,19 +83,16 @@
     </div>
     <div id="main" style="text-align: center;">
       <div>
-        <p> Generos más populares </p>
         <a href="pop.php"><img src="../imagenes/generos/pop.jpeg"/></a>
         <a href="rock.php"><img src="../imagenes/generos/rock.jpeg"/><//></a>
         <a href="latino.php"><img src="../imagenes/generos/latino.jpeg"/><//></a>
       </div>
       <div>
-        <p> Solistas más populares </p>
         <a href="lennon.php"><img src="../imagenes/solistas/lennon.jpeg"/></a>
         <a href="alboran.php"><img src="../imagenes/solistas/alboran.jpeg"/></a>
         <a href="madonna.php"><img src="../imagenes/solistas/madonna.jpeg"/></a>
       </div>
       <div>
-        <p> Grupos más populares </p>
         <a href="coldplay.php"><img src="../imagenes/grupos/coldplay.jpeg"/></a>
         <a href="metallica.php"><img src="../imagenes/grupos/metallica.jpeg"/></a>
         <a href="green_day.php"><img src="../imagenes/grupos/green_day.jpeg"/></a>
