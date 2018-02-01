@@ -87,20 +87,21 @@
     </div>
     <div id="main" style="text-align: center;">
       <div>
-        <a href="pop.php"><img src="../imagenes/generos/pop.jpeg"/></a>
-        <a href="rock.php"><img src="../imagenes/generos/rock.jpeg"/><//></a>
-        <a href="latino.php"><img src="../imagenes/generos/latino.jpeg"/><//></a>
+        <a href="amy.php"><img src="../imagenes/solistas/amy.jpeg"/></a>
+        <a href="marley.php"><img src="../imagenes/solistas/marley.jpeg"/><//></a>
+        <a href="sanz.php"><img src="../imagenes/solistas/sanz.jpeg"/><//></a>
       </div>
       <div>
         <a href="lennon.php"><img src="../imagenes/solistas/lennon.jpeg"/></a>
         <a href="alboran.php"><img src="../imagenes/solistas/alboran.jpeg"/></a>
-        <a href="beatles.php"><img src="../imagenes/grupos/beatles.jpeg"/></a>
+        <a href="jackson.php"><img src="../imagenes/solistas/jackson.jpeg"/></a>
       </div>
       <div>
-        <a href="coldplay.php"><img src="../imagenes/grupos/coldplay.jpeg"/></a>
-        <a href="metallica.php"><img src="../imagenes/grupos/metallica.jpeg"/></a>
-        <a href="green_day.php"><img src="../imagenes/grupos/green_day.jpeg"/></a>
+        <a href="eminem.php"><img src="../imagenes/solistas/eminem.jpeg"/></a>
+        <a href="adams.php"><img src="../imagenes/solistas/adams.jpeg"/></a>
+        <a href="madonna.php"><img src="../imagenes/solistas/madonna.jpeg"/></a>
       </div>
+
 
     <?php
         if (isset($_POST["user"])) {

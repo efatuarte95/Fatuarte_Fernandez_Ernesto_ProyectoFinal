@@ -1,0 +1,22 @@
+html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+#main {
+  background-image: url("../imagenes/portada.jpeg");
+}
+
+#log {
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid blue;
+}
+
+#sign {
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid blue;
+}

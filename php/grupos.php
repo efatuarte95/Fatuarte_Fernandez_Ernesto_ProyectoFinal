@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" type="text/css" href=" ">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </head>
   <style type="text/css">
   html, body {
@@ -63,6 +67,10 @@
         margin-top: 12px;
       }
 
+      #main div {
+        margin-top: 40px;
+      }
+
       #main div img {
         height: 150px;
         width: 150px;
@@ -83,14 +91,14 @@
     </div>
     <div id="main" style="text-align: center;">
       <div>
-        <a href="pop.php"><img src="../imagenes/generos/pop.jpeg"/></a>
-        <a href="rock.php"><img src="../imagenes/generos/rock.jpeg"/><//></a>
-        <a href="latino.php"><img src="../imagenes/generos/latino.jpeg"/><//></a>
+        <a href="park.php"><img src="../imagenes/grupos/park.jpeg"/></a>
+        <a href="maroon.php"><img src="../imagenes/grupos/maroon.jpeg"/></a>
+        <a href="camela.php"><img src="../imagenes/grupos/camela.jpeg"/></a>
       </div>
       <div>
-        <a href="lennon.php"><img src="../imagenes/solistas/lennon.jpeg"/></a>
-        <a href="alboran.php"><img src="../imagenes/solistas/alboran.jpeg"/></a>
-        <a href="madonna.php"><img src="../imagenes/solistas/madonna.jpeg"/></a>
+        <a href="rolling.php"><img src="../imagenes/grupos/maroon.jpeg"/></a>
+        <a href="oreja.php"><img src="../imagenes/grupos/oreja.jpeg"/></a>
+        <a href="beatles.php"><img src="../imagenes/grupos/beatles.jpeg"/></a>
       </div>
       <div>
         <a href="coldplay.php"><img src="../imagenes/grupos/coldplay.jpeg"/></a>
