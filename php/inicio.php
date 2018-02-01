@@ -11,7 +11,7 @@
 }
 
 #menu {
-  background-color: yellow;
+  background-color: blue;
 }
 
 #menu div {
