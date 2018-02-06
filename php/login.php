@@ -70,9 +70,18 @@
               if ($result->num_rows===0) {
                 echo "LOGIN INVALIDO";
               } else {
-                $_SESSION["user"]=$_POST["user"];
+                $obj = $result-> fetch_object();
+                $tipo = $obj->tipo;
 
+                $_SESSION["user"]=$_POST["user"];
+                $_SESSION["tipo"]=$tipo;
+
+                if ($tipo=='Administrador') {
+                  header("Location: inicio.php");
+                }
+                else {
                 header("Location: inicio.php");
+                }
               }
 
           } else {

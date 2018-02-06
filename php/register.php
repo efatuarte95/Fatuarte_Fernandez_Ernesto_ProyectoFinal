@@ -108,17 +108,17 @@
     ?>
 
     <form action="register.php" method="post">
-      <p>Nombre de Usuario:
+      <p style="color:blue">Nombre de Usuario:
       <input name="user" placeholder="Enter Username" required></p>
-      <p>Password:
+      <p style="color:red">Password:
       <input name="password" type="password" placeholder="Password" required></p>
-      <p>Fecha de Nacimiento:
+      <p style="color:blue">Fecha de Nacimiento:
       <input type="date" name="fecha"></p>
-      <p>Nombre de Usuario:
+      <p style="color:red">Nombre de Usuario:
       <input name="nombre" placeholder="Nombre" required></p>
-      <p>Apellidos:
+      <p style="color:blue">Apellidos:
       <input name="apellidos" placeholder="Apellidos" required></p>
-      <p>Sexo:
+      <p style="color:red">Sexo:
       <input type="radio" name="sexo" value="hombre">Hombre
       <input type="radio" name="sexo" value="mujer">Mujer</p>
       <p><input type="submit" value="Registrarse"></p>
