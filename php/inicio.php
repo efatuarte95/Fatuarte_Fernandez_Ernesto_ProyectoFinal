@@ -51,6 +51,21 @@ html, body {
   height: 220px;
   width: 220px;
 }
+
+#genpopular {
+  color: white;
+  font-size: 20px;
+}
+
+#solpopular {
+  color: white;
+  font-size: 20px;
+}
+
+#grpopular {
+  color: white;
+  font-size: 20px;
+}
 </style>
 
 <body id="main">
