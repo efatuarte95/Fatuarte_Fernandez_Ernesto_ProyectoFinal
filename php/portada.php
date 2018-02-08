@@ -75,7 +75,7 @@ html, body {
       <img src="../imagenes/ss.jpeg" height="150" width="150"/></a>
 =======
       <p> Bienvenido a SoundSystem </p>
-      <img src="../imagenes/ss.jpeg" height="75" width="75"/></a>
+      <img src="../imagenes/icono.jpeg" height="75" width="75"/></a>
 >>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
     </div>
   </div>

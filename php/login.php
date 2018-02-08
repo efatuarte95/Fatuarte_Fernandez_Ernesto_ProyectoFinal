@@ -43,7 +43,7 @@
     <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
 
     <div id="inicio" style="text-align: center;">
-      <a href="inicio.php"><img src="../imagenes/ss.jpeg" height="40" width="40" /></a>
+      <a href="inicio.php"><img src="../imagenes/icono.jpeg" height="40" width="40" /></a>
     </div>
     <hr></hr>
 

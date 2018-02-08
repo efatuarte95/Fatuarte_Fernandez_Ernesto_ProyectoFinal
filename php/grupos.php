@@ -110,7 +110,7 @@ html, body {
   <div class="container-fluid">
     <div class="row" id="menu">
       <div class="col-md-1">
-        <a href="inicio.php"><img src="../imagenes/ss.jpeg" height="40" width="40"/></a>
+        <a href="inicio.php"><img src="../imagenes/icono.jpeg" height="40" width="40"/></a>
       </div>
       <div class="col-md-3 offset-md-1">
         <a href="generos.php">Géneros</a>
