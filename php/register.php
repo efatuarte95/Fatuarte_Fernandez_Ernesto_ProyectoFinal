@@ -23,7 +23,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      opacity: 0.8;
+      opacity: 0.7;
   }
   #inicio img {
     margin-top: 10px;
