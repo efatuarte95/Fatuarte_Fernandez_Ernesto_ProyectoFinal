@@ -5,10 +5,15 @@
 <head>
     <meta charset="utf-8">
     <title> Sound System </title>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <style type="text/css">
 html, body {
+<<<<<<< HEAD
     height: 100%;
     width: 100%;
     padding: 0;
@@ -29,25 +34,82 @@ html, body {
 #menu {
   background-color: black;
 }
+=======
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+    }
+
+#img {
+  z-index: -999;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+#main {
+  background-image: url("../imagenes/portada.jpeg");
+}
+
+#menu {
+  background-color: black;
+}
+
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 #menu div {
   text-align: center;
   font-size: 25px;
   color: red;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 #generos img {
   height: 220px;
   width: 220px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 #solistas img {
   height: 220px;
   width: 220px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 #grupos img {
   height: 220px;
   width: 220px;
 }
+<<<<<<< HEAD
 </style>
 
+=======
+
+#genpopular {
+  font-size: 20px;
+  color: yellow;
+}
+
+#solpopular {
+  font-size: 20px;
+  color: yellow;
+}
+
+#grpopular {
+  font-size: 20px;
+  color: yellow;
+}
+</style>
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 <body id="main">
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
   <div class="container-fluid">

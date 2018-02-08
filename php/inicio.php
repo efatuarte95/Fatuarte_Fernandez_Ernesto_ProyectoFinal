@@ -11,9 +11,13 @@ html, body {
     padding: 0;
     margin: 0;
 }
+<<<<<<< HEAD
 #inicio img {
   margin-top: 10px;
 }
+=======
+
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 #img {
     z-index: -999;
     width: 100%;
@@ -21,7 +25,15 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
+<<<<<<< HEAD
     opacity: 0.8;
+=======
+    opacity: 0.7;
+}
+
+#main {
+  background-image: url("../imagenes/portada.jpeg");
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 }
 
 #menu {

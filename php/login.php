@@ -62,8 +62,15 @@
               } else {
                 $obj = $result-> fetch_object();
                 $tipo = $obj->tipo;
+<<<<<<< HEAD
                 $_SESSION["user"]=$_POST["user"];
                 $_SESSION["tipo"]=$tipo;
+=======
+
+                $_SESSION["user"]=$_POST["user"];
+                $_SESSION["tipo"]=$tipo;
+
+>>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
                 if ($tipo=='Administrador') {
                   header("Location: inicio.php");
                 }
