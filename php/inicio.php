@@ -1,7 +1,11 @@
+<?php
+  session_start();
+?>
 <html>
 <head>
     <meta charset="utf-8">
     <title> Sound System </title>
+    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <style type="text/css">
@@ -11,13 +15,9 @@ html, body {
     padding: 0;
     margin: 0;
 }
-<<<<<<< HEAD
 #inicio img {
   margin-top: 10px;
 }
-=======
-
->>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
 #img {
     z-index: -999;
     width: 100%;
@@ -25,50 +25,34 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-<<<<<<< HEAD
     opacity: 0.8;
-=======
-    opacity: 0.7;
 }
-
-#main {
-  background-image: url("../imagenes/portada.jpeg");
->>>>>>> 60e21fc78c81d3b7f7076cdec8d13ca01fa82e54
-}
-
 #menu {
   background-color: black;
 }
+
 #menu div {
   text-align: center;
   font-size: 25px;
   color: red;
 }
+
 #generos img {
   height: 220px;
   width: 220px;
 }
+
 #solistas img {
   height: 220px;
   width: 220px;
 }
+
 #grupos img {
   height: 220px;
   width: 220px;
 }
-#genpopular {
-  font-size: 20px;
-  color: yellow;
-}
-#solpopular {
-  font-size: 20px;
-  color: yellow;
-}
-#grpopular {
-  font-size: 20px;
-  color: yellow;
-}
 </style>
+
 <body id="main">
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
   <div class="container-fluid">
