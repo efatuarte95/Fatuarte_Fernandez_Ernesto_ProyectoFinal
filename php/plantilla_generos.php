@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -21,57 +24,34 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 0.9;
+    opacity: 0.8;
 }
-
-#log {
-  margin-top: 10px;
-  text-align: center;
-  border: 1px solid red;
-  font-size: 20px;
+#menu {
   background-color: black;
 }
-
-#sign {
-  margin-top: 10px;
+#menu div {
   text-align: center;
-  border: 1px solid red;
-  font-size: 20px;
-  background-color: black;
-}
-
-#text {
-  margin-top: 150px;
-  margin-left: 500px;
-  font-size: 50px;
-  color: blue;
-}
-
-#ss {
-  margin-left: 580px;
+  font-size: 25px;
+  color: red;
 }
 </style>
 
 <body id="main">
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3 offset-md-8">
-        <div class="row">
-          <div class="col-md-5" id="log">
-            <a href="login.php">LOG IN</a>
-          </div>
-          <div class="col-md-5 offset-md-1" id="sign">
-            <a href="register.php">SIGN IN</a>
-          </div>
-        </div>
+    <div class="row" id="menu">
+      <div class="col-md-1">
+        <a href="inicio.php"><img src="../imagenes/ss.jpeg" height="40" width="40"/></a>
       </div>
-    </div>
-    <div class="row" id=text>
-      <p> SoundSystem </p>
-    </div>
-    <div class="row" id=ss>
-      <img src="../imagenes/ss.jpeg" height="150" width="150"/></a>
+      <div class="col-md-3 offset-md-1">
+        <a href="generos.php">Géneros</a>
+      </div>
+      <div class="col-md-3">
+        <a href="solistas.php">Solistas</a>
+      </div>
+      <div class="col-md-3">
+        <a href="grupos.php">Grupos</a>
+      </div>
     </div>
   </div>
 

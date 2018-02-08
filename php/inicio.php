@@ -2,61 +2,69 @@
 <head>
     <meta charset="utf-8">
     <title> Sound System </title>
-    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <style type="text/css">
-#main {
-  background-image: url("../imagenes/portada.jpeg");
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#inicio img {
+  margin-top: 10px;
+}
+#img {
+    z-index: -999;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
 }
 
 #menu {
-  background-color: yellow;
+  background-color: black;
 }
-
 #menu div {
-  border: 1px solid red;
   text-align: center;
   font-size: 25px;
+  color: red;
 }
-
 #generos img {
   height: 220px;
   width: 220px;
 }
-
 #solistas img {
   height: 220px;
   width: 220px;
 }
-
 #grupos img {
   height: 220px;
   width: 220px;
 }
-
 #genpopular {
   font-size: 20px;
   color: yellow;
 }
-
 #solpopular {
   font-size: 20px;
   color: yellow;
 }
-
 #grpopular {
   font-size: 20px;
   color: yellow;
 }
 </style>
 <body id="main">
+  <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
   <div class="container-fluid">
     <div class="row" id="menu">
       <div class="col-md-1">
         <a href="inicio.php"><img src="../imagenes/ss.jpeg" height="40" width="40"/></a>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 offset-md-1">
         <a href="generos.php">Géneros</a>
       </div>
       <div class="col-md-3">
@@ -74,116 +82,116 @@
       </div>
     </div>
     <div class="row" id="grupos">
-        <div class="col-md-2 offset-md-1">
-          <a href="green_day.php">
+        <div class="col-md-2 offset-md-2">
+          <a href="pop.php">
           <div class="row">
-            <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+            <img class="w-100" src="../imagenes/generos/pop.jpeg"/>
           </div>
           <div class="row justify-content-center ">
             <div class="col-auto">
-              <p > Green Day </p>
+              <p > Pop </p>
             </div>
           </div></a>
         </div>
         <div class="col-md-2 offset-md-1">
-        <a href="green_day.php">
+        <a href="heavy.php">
         <div class="row">
-            <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+            <img class="w-100" src="../imagenes/generos/heavy.jpeg"/>
         </div>
         <div class="row justify-content-center ">
           <div class="col-auto">
-            <p > Green Day </p>
+            <p > Heavy Metal </p>
           </div>
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="green_day.php">
+        <a href="latino.php">
         <div class="row">
-          <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+          <img class="w-100" src="../imagenes/generos/latino.jpeg"/>
         </div>
         <div class="row justify-content-center ">
           <div class="col-auto">
-            <p > Green Day </p>
+            <p > Latino </p>
           </div>
         </div></a>
       </div>
     </div>
     <div class="row" id="solpopular">
-      <div class="col-md-8 offset-md-5 mt-3">
+      <div class="col-md-8 offset-md-5 mt-2">
         <p> Solistas más populares </p>
       </div>
     </div>
     <div class="row" id="grupos">
-      <div class="col-md-2 offset-md-1">
-        <a href="green_day.php">
+      <div class="col-md-2 offset-md-2">
+        <a href="alboran.php">
         <div class="row">
-          <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+          <img class="w-100" src="../imagenes/solistas/alboran.jpeg"/>
         </div>
         <div class="row justify-content-center ">
           <div class="col-auto">
-            <p > Green Day </p>
+            <p > Pablo Alborán </p>
           </div>
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="green_day.php">
+        <a href="lennon.php">
         <div class="row">
-          <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+          <img class="w-100" src="../imagenes/solistas/lennon.jpeg"/>
         </div>
         <div class="row justify-content-center ">
           <div class="col-auto">
-            <p > Green Day </p>
+            <p > John Lennon </p>
           </div>
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="green_day.php">
+        <a href="marley.php">
         <div class="row">
-          <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+          <img class="w-100" src="../imagenes/solistas/marley.jpeg"/>
         </div>
         <div class="row justify-content-center ">
           <div class="col-auto">
-            <p > Green Day </p>
+            <p > Bob Marley </p>
           </div>
         </div></a>
       </div>
     </div>
   <div class="row" id="grpopular">
-    <div class="col-md-8 offset-md-5 mt-3">
+    <div class="col-md-8 offset-md-5 mt-2">
       <p> Grupos más populares </p>
     </div>
   </div>
   <div class="row" id="grupos">
-    <div class="col-md-2 offset-md-1">
-      <a href="green_day.php">
+    <div class="col-md-2 offset-md-2">
+      <a href="rolling.php">
       <div class="row">
-        <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+        <img class="w-100" src="../imagenes/grupos/rolling.jpeg"/>
       </div>
       <div class="row justify-content-center ">
         <div class="col-auto">
-          <p > Green Day </p>
+          <p > Rolling Stones </p>
         </div>
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="green_day.php">
+      <a href="metallica.php">
       <div class="row">
-        <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+        <img class="w-100" src="../imagenes/grupos/metallica.jpeg"/>
       </div>
       <div class="row justify-content-center ">
         <div class="col-auto">
-          <p > Green Day </p>
+          <p > Metallica </p>
         </div>
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="green_day.php">
+      <a href="beatles.php">
       <div class="row">
-        <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
+        <img class="w-100" src="../imagenes/grupos/beatles.jpeg"/>
       </div>
       <div class="row justify-content-center ">
         <div class="col-auto">
-          <p > Green Day </p>
+          <p > The Beatles </p>
         </div>
       </div></a>
     </div>
