@@ -32,7 +32,7 @@ html, body {
 }
 
 #menu div {
-  text-align: center;
+  text-align: left;
   font-size: 25px;
 }
 
@@ -54,6 +54,21 @@ html, body {
 #grupos img {
   height: 220px;
   width: 220px;
+}
+
+#genpopular {
+  color: white;
+  font-size: 20px;
+}
+
+#solpopular {
+  color: white;
+  font-size: 20px;
+}
+
+#grpopular {
+  color: white;
+  font-size: 20px;
 }
 </style>
 
@@ -78,17 +93,34 @@ html, body {
       </div>
     </div>
   </div>
-
-    <div class="container-fluid mt-2">
-      <div class="row" id="grupos">
+  <div class="container-fluid">
+    <div class="row" id="menu">
+      <div class="col-md-3 offset-md-1">
+        <a href="editar.php">Editar</a>
+      </div>
+      <div class="col-md-3 offset-md-1">
+        <a href="añañadir.php">Añadir</a>
+      </div>
+      <div class="col-md-3 offset-md-1">
+        <a href="eliminar.php">Eliminar</a>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid">
+    <div class="row" id="genpopular">
+      <div class="col-md-8 offset-md-5">
+        <p> Géneros más populares </p>
+      </div>
+    </div>
+    <div class="row" id="grupos">
         <div class="col-md-2 offset-md-2">
-          <a href="classic.php">
+          <a href="pop.php">
           <div class="row">
-            <img class="w-100" src="../imagenes/generos/classic.jpeg"/>
+            <img class="w-100" src="../imagenes/generos/pop.jpeg"/>
           </div>
           <div class="row justify-content-center ">
             <div class="col-auto">
-              <p > Clásica </p>
+              <p > Pop </p>
             </div>
           </div></a>
         </div>
@@ -104,31 +136,7 @@ html, body {
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="rap.php">
-        <div class="row">
-          <img class="w-100" src="../imagenes/generos/rap.jpeg"/>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-auto">
-            <p > Rap </p>
-          </div>
-        </div></a>
-      </div>
-    </div>
-    <div class="row" id="grupos">
-      <div class="col-md-2 offset-md-2">
-        <a href="pop.php">
-        <div class="row">
-          <img class="w-100" src="../imagenes/generos/pop.jpeg"/>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-auto">
-            <p > Pop </p>
-          </div>
-        </div></a>
-      </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="latina.php">
+        <a href="latino.php">
         <div class="row">
           <img class="w-100" src="../imagenes/generos/latino.jpeg"/>
         </div>
@@ -138,49 +146,83 @@ html, body {
           </div>
         </div></a>
       </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="rock.php">
+    </div>
+    <div class="row" id="solpopular">
+      <div class="col-md-8 offset-md-5 mt-2">
+        <p> Solistas más populares </p>
+      </div>
+    </div>
+    <div class="row" id="grupos">
+      <div class="col-md-2 offset-md-2">
+        <a href="alboran.php">
         <div class="row">
-          <img class="w-100" src="../imagenes/generos/rock.jpeg"/>
+          <img class="w-100" src="../imagenes/solistas/alboran.jpeg"/>
         </div>
         <div class="row justify-content-center ">
           <div class="col-auto">
-            <p > Rock </p>
+            <p > Pablo Alborán </p>
+          </div>
+        </div></a>
+      </div>
+      <div class="col-md-2 offset-md-1">
+        <a href="lennon.php">
+        <div class="row">
+          <img class="w-100" src="../imagenes/solistas/lennon.jpeg"/>
+        </div>
+        <div class="row justify-content-center ">
+          <div class="col-auto">
+            <p > John Lennon </p>
+          </div>
+        </div></a>
+      </div>
+      <div class="col-md-2 offset-md-1">
+        <a href="marley.php">
+        <div class="row">
+          <img class="w-100" src="../imagenes/solistas/marley.jpeg"/>
+        </div>
+        <div class="row justify-content-center ">
+          <div class="col-auto">
+            <p > Bob Marley </p>
           </div>
         </div></a>
       </div>
     </div>
+  <div class="row" id="grpopular">
+    <div class="col-md-8 offset-md-5 mt-2">
+      <p> Grupos más populares </p>
+    </div>
+  </div>
   <div class="row" id="grupos">
     <div class="col-md-2 offset-md-2">
-      <a href="indie.php">
+      <a href="rolling.php">
       <div class="row">
-        <img class="w-100" src="../imagenes/generos/indie.jpeg"/>
+        <img class="w-100" src="../imagenes/grupos/rolling.jpeg"/>
       </div>
       <div class="row justify-content-center ">
         <div class="col-auto">
-          <p > Indie </p>
+          <p > Rolling Stones </p>
         </div>
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="country.php">
+      <a href="metallica.php">
       <div class="row">
-        <img class="w-100" src="../imagenes/generos/country.jpeg"/>
+        <img class="w-100" src="../imagenes/grupos/metallica.jpeg"/>
       </div>
       <div class="row justify-content-center ">
         <div class="col-auto">
-          <p > Country </p>
+          <p > Metallica </p>
         </div>
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="jazz.php">
+      <a href="beatles.php">
       <div class="row">
-        <img class="w-100" src="../imagenes/generos/jazz.jpeg"/>
+        <img class="w-100" src="../imagenes/grupos/beatles.jpeg"/>
       </div>
       <div class="row justify-content-center ">
         <div class="col-auto">
-          <p > Jazz </p>
+          <p > The Beatles </p>
         </div>
       </div></a>
     </div>

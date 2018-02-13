@@ -35,9 +35,13 @@
   form p:last-child {
       margin-left: 125px;
   }
+
+  #ok {
+    margin-left: 100px;
+    font-size: 20px;
+    color: blue;
+  }
   </style>
-
-
   <body>
 
     <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
@@ -80,7 +84,7 @@
           }
       }
     ?>
-
+    <p id="ok"> El registro ha sido correcto, Inicie Sesión </p>
     <form action="login.php" method="post" style="text-align: center;">
 
       <p><input name="user" placeholder="Enter Username" required></p>

@@ -56,36 +56,48 @@
   form p:last-child input {
       width: 200px;
   }
+
+  #final {
+    margin-left: 490px;
+    font-size: 18px;
+    color: white;
+  }
+
+  #final a {
+    font-size: 18px;
+    color: red;
+  }
+
   </style>
   <body>
 
     <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
 
     <div id="inicio" style="text-align: center;">
-      <a href="inicio.php"><img src="../imagenes/icono.jpeg" height="50" width="50" /></a>
+      <a href="portada.php"><img src="../imagenes/icono.jpeg" height="50" width="50" /></a>
     </div>
     <hr></hr>
 
     <?php
-        if (isset($_POST["user"])) {
-          $connection = new mysqli("localhost", "root", "Admin2015", "proyecto", "3316");
-          if ($connection->connect_errno) {
-              printf("Connection failed: %s\n", $connection->connect_error);
-              exit();
-          }
-          $consulta="select * from usuarios where
-          nombre_usuario='".$_POST["user"]."' and password=md5('".$_POST["password"]."');";
-          if ($result = $connection->query($consulta)) {
-              if ($result->num_rows===0) {
-                echo "REGISTRO INVÁLIDO";
-              } else {
-                $_SESSION["user"]=$_POST["user"];
-                header("Location: inicio.php");
-              }
-          } else {
-            echo "Nombre de usuario ya existente";
-          }
-      }
+    if (isset($_POST["user"])) {
+    $connection = new mysqli("localhost", "root", "Admin2015", "proyecto", "3316");
+
+    if ($connection->connect_errno) {
+        printf("Connection failed: %s\n", $connection->connect_error);
+        exit();
+    }
+
+    $usuario="INSERT INTO usuarios (nombre_usuario, password, fecha_nacimiento, sexo, nombre, apellidos,
+      tipo) VALUES ('".$_POST['user']."',md5('".$_POST['password']."'),'".$_POST['date']."','".$_POST['sexo']."',
+    '".$_POST['nombre']."','".$_POST['apellidos']."','normal');";
+
+    if ($result = $connection->query($usuario)) {
+       echo "<h1>Has sido registrado</h1>";
+       header("Location: login2.php");
+     } else {
+       echo "<h1>Error en el registro</h1>";
+     }
+    }
     ?>
 
     <form action="register.php" method="post">
@@ -95,7 +107,7 @@
       <input name="password" type="password" placeholder="Password" required></p>
       <p style="color:blue">Fecha de Nacimiento:
       <input type="date" name="fecha"></p>
-      <p style="color:red">Nombre de Usuario:
+      <p style="color:red">Nombre:
       <input name="nombre" placeholder="Nombre" required></p>
       <p style="color:blue">Apellidos:
       <input name="apellidos" placeholder="Apellidos" required></p>
@@ -104,6 +116,7 @@
       <input type="radio" name="sexo" value="mujer">Mujer</p>
       <p><input type="submit" value="Registrarse"></p>
     </form>
+    <p id="final"> ¿Ya estás registrado? Entra <a href="login.php"> aquí </a></p>
 
   </body>
 </html>
