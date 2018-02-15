@@ -92,8 +92,7 @@
     '".$_POST['nombre']."','".$_POST['apellidos']."','normal');";
 
     if ($result = $connection->query($usuario)) {
-       echo "<h1>Has sido registrado</h1>";
-       header("Location: login2.php");
+       header("Location: login.php");
      } else {
        echo "<h1>Error en el registro</h1>";
      }

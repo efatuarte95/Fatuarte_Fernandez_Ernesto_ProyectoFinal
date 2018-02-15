@@ -69,10 +69,10 @@
                 $_SESSION["tipo"]=$tipo;
 
                 if ($tipo=='Administrador') {
-                  header("Location: inicio_admin.php");
+                  header("Location: inicio.php");
                 }
                 else {
-                header("Location: inicio.php");
+                  header("Location: inicio.php");
                 }
               }
           } else {

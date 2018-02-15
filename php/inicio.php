@@ -74,29 +74,17 @@ html, body {
 
 <body id="main">
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
-  <div class="container-fluid">
-    <div class="row" id="menu">
-      <div class="col-md-1">
-        <a href="inicio.php"><img src="../imagenes/icono.jpeg" height="40" width="40"/></a>
-      </div>
-      <div class="col-md-2 offset-md-2">
-        <a href="generos.php">Géneros</a>
-      </div>
-      <div class="col-md-2">
-        <a href="solistas.php">Solistas</a>
-      </div>
-      <div class="col-md-2">
-        <a href="grupos.php">Grupos</a>
-      </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="portada.php" id="logoff">Log Off</a>
-      </div>
-    </div>
-  </div>
+  <?php
+    if ($_SESSION["tipo"]=='Administrador') {
+      include("cabecera_admin.php");
+    } else {
+      include("cabecera.php");
+    }
+  ?>
     <div class="container-fluid">
     <div class="row" id="genpopular">
       <div class="col-md-8 offset-md-5">
-        <p> Géneros más populares </p>
+        <p><b> Géneros más populares </b></p>
       </div>
     </div>
     <div class="row" id="grupos">
@@ -107,7 +95,7 @@ html, body {
           </div>
           <div class="row justify-content-center ">
             <div class="col-auto">
-              <p > Pop </p>
+              <p> Pop </p>
             </div>
           </div></a>
         </div>
@@ -136,7 +124,7 @@ html, body {
     </div>
     <div class="row" id="solpopular">
       <div class="col-md-8 offset-md-5 mt-2">
-        <p> Solistas más populares </p>
+        <p><b> Solistas más populares </b></p>
       </div>
     </div>
     <div class="row" id="grupos">
@@ -176,7 +164,7 @@ html, body {
     </div>
   <div class="row" id="grpopular">
     <div class="col-md-8 offset-md-5 mt-2">
-      <p> Grupos más populares </p>
+      <p><b> Grupos más populares </b></p>
     </div>
   </div>
   <div class="row" id="grupos">

@@ -59,25 +59,13 @@ html, body {
 
 <body id="main">
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
-  <div class="container-fluid">
-    <div class="row" id="menu">
-      <div class="col-md-1">
-        <a href="inicio.php"><img src="../imagenes/icono.jpeg" height="40" width="40"/></a>
-      </div>
-      <div class="col-md-2 offset-md-2">
-        <a href="generos.php">Géneros</a>
-      </div>
-      <div class="col-md-2">
-        <a href="solistas.php">Solistas</a>
-      </div>
-      <div class="col-md-2">
-        <a href="grupos.php">Grupos</a>
-      </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="portada.php" id="logoff">Log Off</a>
-      </div>
-    </div>
-  </div>
+  <?php
+    if ($_SESSION["tipo"]=='Administrador') {
+      include("cabecera_admin.php");
+    } else {
+      include("cabecera.php");
+    }
+  ?>
     <div class="container-fluid mt-2">
       <div class="row" id="grupos">
         <div class="col-md-2 offset-md-2">
