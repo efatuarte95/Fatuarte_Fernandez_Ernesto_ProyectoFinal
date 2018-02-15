@@ -58,7 +58,7 @@
           nombre_usuario='".$_POST["user"]."' and password=md5('".$_POST["password"]."');";
           if ($result = $connection->query($consulta)) {
               if ($result->num_rows===0) {
-                echo "LOGIN INVALIDO";
+                echo "<p style='margin-left: 555px; color: black; font-size: 20px;'> LOGIN INVÁLIDO </p>";
               } else {
                 $obj = $result-> fetch_object();
                 $tipo = $obj->tipo;

@@ -61,7 +61,7 @@ html, body {
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
   <?php
     if ($_SESSION["tipo"]=='Administrador') {
-      include("cabecera_admin.php");
+      include("cabecera.php");
     } else {
       include("cabecera.php");
     }

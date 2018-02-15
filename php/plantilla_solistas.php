@@ -29,7 +29,6 @@ html, body {
 #menu {
   background-color: black;
 }
-
 #menu div {
   text-align: center;
   font-size: 25px;
@@ -43,25 +42,13 @@ html, body {
 
 <body id="main">
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
-  <div class="container-fluid">
-    <div class="row" id="menu">
-      <div class="col-md-1">
-        <a href="inicio.php"><img src="../imagenes/icono.jpeg" height="40" width="40"/></a>
-      </div>
-      <div class="col-md-2 offset-md-2">
-        <a href="generos.php">Géneros</a>
-      </div>
-      <div class="col-md-2">
-        <a href="solistas.php">Solistas</a>
-      </div>
-      <div class="col-md-2">
-        <a href="grupos.php">Grupos</a>
-      </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="portada.php" id="logoff">Log Off</a>
-      </div>
-    </div>
-  </div>
+  <?php
+    if ($_SESSION["tipo"]=='Administrador') {
+      include("cabecera_solistas.php");
+    } else {
+      include("cabecera.php");
+    }
+  ?>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

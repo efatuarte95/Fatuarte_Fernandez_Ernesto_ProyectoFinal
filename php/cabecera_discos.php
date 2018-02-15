@@ -12,10 +12,12 @@
     <div class="col-md-2">
       <a href="grupos.php">Grupos</a>
     </div>
-    <div class="col-md-1">
-      <a href="administrar.php"><img src="../imagenes/config.jpeg" height="39" width="37"/></a>
+    <div class="col-md-2">
+      <a href="add_discos.php" style="margin-left: 5px;"><img src="../imagenes/add.jpeg" height="25" width="25"/></a>
+      <a href="del_discos.php" style="margin-left: 15px;"><img src="../imagenes/del.jpeg" height="25" width="25"/></a>
+      <a href="edit_discos.php" style="margin-left: 15px;"><img src="../imagenes/edit.jpeg" height="25" width="25"/></a>
     </div>
-    <div class="col-md-2 offset-md-1">
+    <div class="col-md-2 offset">
       <a href="portada.php" id="logoff">Log Off</a>
     </div>
   </div>
