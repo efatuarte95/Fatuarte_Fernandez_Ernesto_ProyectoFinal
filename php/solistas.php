@@ -69,7 +69,7 @@ html, body {
     <div class="container-fluid mt-2">
       <div class="row" id="grupos">
         <div class="col-md-2 offset-md-2">
-          <a href="eminem.php">
+          <a href="plantilla_solistas.php?id=1">
           <div class="row">
             <img class="w-100" src="../imagenes/solistas/eminem.jpeg"/>
           </div>
@@ -80,7 +80,7 @@ html, body {
           </div></a>
         </div>
         <div class="col-md-2 offset-md-1">
-        <a href="sanz.php">
+        <a href="plantilla_solistas.php?id=2">
         <div class="row">
             <img class="w-100" src="../imagenes/solistas/sanz.jpeg"/>
         </div>
@@ -91,7 +91,7 @@ html, body {
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="madonna.php">
+        <a href="plantilla_solistas.php?id=3">
         <div class="row">
           <img class="w-100" src="../imagenes/solistas/madonna.jpeg"/>
         </div>
@@ -104,7 +104,7 @@ html, body {
     </div>
     <div class="row" id="grupos">
       <div class="col-md-2 offset-md-2">
-        <a href="lennon.php">
+        <a href="plantilla_solistas.php?id=4">
         <div class="row">
           <img class="w-100" src="../imagenes/solistas/lennon.jpeg"/>
         </div>
@@ -115,7 +115,7 @@ html, body {
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="marley.php">
+        <a href="plantilla_solistas.php?id=5">
         <div class="row">
           <img class="w-100" src="../imagenes/solistas/marley.jpeg"/>
         </div>
@@ -126,7 +126,7 @@ html, body {
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="alboran.php">
+        <a href="plantilla_solistas.php?id=6">
         <div class="row">
           <img class="w-100" src="../imagenes/solistas/alboran.jpeg"/>
         </div>
@@ -139,7 +139,7 @@ html, body {
     </div>
   <div class="row" id="grupos">
     <div class="col-md-2 offset-md-2">
-      <a href="jackson.php">
+      <a href="plantilla_solistas.php?id=7">
       <div class="row">
         <img class="w-100" src="../imagenes/solistas/jackson.jpeg"/>
       </div>
@@ -150,7 +150,7 @@ html, body {
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="amy.php">
+      <a href="plantilla_solistas.php?id=8">
       <div class="row">
         <img class="w-100" src="../imagenes/solistas/amy.jpeg"/>
       </div>
@@ -161,7 +161,7 @@ html, body {
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="adams.php">
+      <a href="plantilla_solistas.php?id=9">
       <div class="row">
         <img class="w-100" src="../imagenes/solistas/adams.jpeg"/>
       </div>

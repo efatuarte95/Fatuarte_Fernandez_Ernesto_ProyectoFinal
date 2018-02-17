@@ -69,7 +69,7 @@ html, body {
     <div class="container-fluid mt-2">
       <div class="row" id="grupos">
         <div class="col-md-2 offset-md-2">
-          <a href="metallica.php">
+          <a href="plantilla_grupos.php?id=1">
           <div class="row">
             <img class="w-100" src="../imagenes/grupos/metallica.jpeg"/>
           </div>
@@ -80,7 +80,7 @@ html, body {
           </div></a>
         </div>
         <div class="col-md-2 offset-md-1">
-        <a href="oreja.php">
+        <a href="plantilla_grupos.php?id=2">
         <div class="row">
             <img class="w-100" src="../imagenes/grupos/oreja.jpeg"/>
         </div>
@@ -91,7 +91,7 @@ html, body {
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="beatles.php">
+        <a href="plantilla_grupos.php?id=3">
         <div class="row">
           <img class="w-100" src="../imagenes/grupos/beatles.jpeg"/>
         </div>
@@ -104,7 +104,7 @@ html, body {
     </div>
     <div class="row" id="grupos">
       <div class="col-md-2 offset-md-2">
-        <a href="maroon.php">
+        <a href="plantilla_grupos.php?id=4">
         <div class="row">
           <img class="w-100" src="../imagenes/grupos/maroon.jpeg"/>
         </div>
@@ -115,7 +115,7 @@ html, body {
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="rolling.php">
+        <a href="plantilla_grupos.php?id=5">
         <div class="row">
           <img class="w-100" src="../imagenes/grupos/rolling.jpeg"/>
         </div>
@@ -126,7 +126,7 @@ html, body {
         </div></a>
       </div>
       <div class="col-md-2 offset-md-1">
-        <a href="park.php">
+        <a href="plantilla_grupos.php?id=6">
         <div class="row">
           <img class="w-100" src="../imagenes/grupos/park.jpeg"/>
         </div>
@@ -139,7 +139,7 @@ html, body {
     </div>
   <div class="row" id="grupos">
     <div class="col-md-2 offset-md-2">
-      <a href="green_day.php">
+      <a href="plantilla_grupos.php?id=7">
       <div class="row">
         <img class="w-100" src="../imagenes/grupos/green_day.jpeg"/>
       </div>
@@ -150,7 +150,7 @@ html, body {
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="coldplay.php">
+      <a href="plantilla_grupos.php?id=8">
       <div class="row">
         <img class="w-100" src="../imagenes/grupos/coldplay.jpeg"/>
       </div>
@@ -161,7 +161,7 @@ html, body {
       </div></a>
     </div>
     <div class="col-md-2 offset-md-1">
-      <a href="camela.php">
+      <a href="plantilla_grupos.php?id=9">
       <div class="row">
         <img class="w-100" src="../imagenes/grupos/camela.jpeg"/>
       </div>
