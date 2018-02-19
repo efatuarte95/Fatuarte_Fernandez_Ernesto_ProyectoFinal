@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Editar Grupos </title>
+    <title> Borrar Grupos </title>
     <link rel="stylesheet" type="text/css" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -39,12 +39,13 @@
 
         while($obj = $result->fetch_object()) {
             echo "<tr>";
-              echo "<td><a href='edit_grupos.php?id=".$obj->id_grupo.
-              "&nombre=".$obj->nombre."'>".$obj->id_grupo."</a></td>";
+              echo "<td><a href='del_grupos.php?id=".$obj->id_grupo.
+              "'>".$obj->id_grupo."</a></td>";
               echo "<td>".$obj->nombre."</td>";
               echo "<td>".$obj->pais."</td>";
               echo "<td>".$obj->genero."</td>";
               echo "<td>".$obj->fecha_debut."</td>";
+              echo "<td><a href='del_grupos.php?id=".$obj->id_grupo."'><img src='../imagenes/delete.jpeg' height='25' width='25'/></a></td>";
             echo "</tr>";
 
         }

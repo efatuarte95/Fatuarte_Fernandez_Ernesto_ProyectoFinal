@@ -20,12 +20,12 @@
   if (!isset($_POST["name"])) : ?>
       <form method="post">
         <fieldset>
-          <legend>GRUPOS</legend>
+          <legend>Añade los datos del nuevo grupo</legend>
           <span>Nombre:</span><input type="text" name="name" required><br>
           <span>País:</span><input type="text" name="pais" required><br>
           <span>Género:</span><input type="text" name="genero" required><br>
-          <span>Fecha de Debut:</span><input type="date" name="fecha_debut" required><br>
-          <span><input type="submit" value="Insertar"><br>
+          <span>Año de Debut:</span><input type="date" name="fecha_debut" required><br>
+          <span><input type="submit" value="Insertar">
         </fieldset>
       </form>
 
@@ -38,19 +38,25 @@
         exit();
    }
 
-     $codigo=$_POST['name'];
-     $consulta= "INSERT INTO GRUPOS VALUES('$codigo','".$_POST['id']."','".$_POST['lastname']."')";
+     $name=$_POST['name'];
+     $pais=$_POST['pais'];
+     $genero=$_POST['genero'];
+     $fecha_debut=$_POST['fecha_debut'];
+     $consulta= "INSERT INTO grupos VALUES('','$name','$pais', '$genero', '$fecha_debut')";
 
      $result = $connection->query($consulta);
 
      if (!$result) {
-        echo "Query Error";
+        echo "Query Error <br>";
      } else {
-         echo "Nuevo grupo añadido";
+         echo "Nuevo grupo añadido <br>";
      }
 
    ?>
 
     <?php endif ?>
+
+    <a href="add_grupos.php"><input type="button" style="color: #FF0000;" value="Volver"></a>
+
 </body>
 </html>
