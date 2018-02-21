@@ -92,7 +92,7 @@ html, body {
               echo "<td>".$obj->nombre."</td>";
               echo "<td>".$obj->fecha_salida."</td>";
               echo "<td>".$obj->premios."</td>";
-              echo "<td><a href='plantilla_canciones.php?id=".$obj->portada."'><img src='../imagenes/delete.jpeg' height='25' width='25'/></a></td>";
+              echo "<td><a href='plantilla_canciones.php?id=".$obj->portada."'></td>";
             echo "</tr>";
 
         }
