@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Sound System </title>
+    <title> Editar Grupos </title>
     <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -85,7 +85,7 @@ span {
         ?>
         <form method="post">
           <fieldset>
-            <legend>Información de <?php  echo "$_GET[nombre]"; ?></legend>
+            <legend>Información del grupo</legend>
             <span>Nombre:</span><input value='<?php echo $nombre; ?>' type="text" name="nombre" required><br>
             <span>País:</span><input value='<?php echo $pais; ?>'type="text" name="pais" required><br>
             <span>Género:</span><input type="text" value='<?php echo $genero; ?>'name="genero" required><br>
@@ -104,7 +104,6 @@ span {
         $pais = $_POST["pais"];
         $genero = $_POST["genero"];
         $fecha_debut = $_POST["fecha_debut"];
-        $dni = $_POST["dni"];
 
         $connection = new mysqli("localhost", "root", "Admin2015", "proyecto", "3316");
         $connection->set_charset("uft8");
@@ -119,9 +118,9 @@ span {
         WHERE id_grupo='$id'";
 
         if ($result = $connection->query($query)) {
-          echo "Datos actualizados <br>";
+          echo "Grupo actualizado <br>";
         } else {
-          echo "Error al actualizar los datos";
+          echo "Error al actualizar los datos <br>";
         }
 
         ?>

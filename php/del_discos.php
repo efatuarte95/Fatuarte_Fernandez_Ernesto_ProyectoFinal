@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borrar Grupos</title>
+    <title>Borrar Discos</title>
     <link rel="stylesheet" type="text/css" href=" ">
     <style></style>
   </head>
@@ -17,7 +17,7 @@
    }
 
      $id=$_GET['id'];
-     $consulta= "DELETE FROM grupos WHERE id_grupo='$id'";
+     $consulta= "DELETE FROM discos WHERE id_disco='$id'";
 
      $result = $connection->query($consulta);
 
@@ -29,7 +29,7 @@
 
    ?>
 
-      <a href='borrar_grupos.php'><input type='button' style='color: #FF0000' value='Volver'></a>
+      <a href='borrar_discos.php'><input type='button' style='color: #FF0000' value='Volver'></a>
 
 
   </body>

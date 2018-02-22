@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Sound System </title>
+    <title> Editar Solista </title>
     <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -72,24 +72,24 @@ span {
             }
 
             $id = $obj->id_solista;
-            $nombre = $obj->Nombre;
-            $pais = $obj->País;
-            $genero = $obj->Género;
-            $fecha_debut = $obj->Fecha_Debut;
+            $nombre = $obj->nombre;
+            $pais = $obj->pais;
+            $genero = $obj->genero;
+            $fecha_debut = $obj->fecha_debut;
 
           } else {
-            echo "No se han recuperar los datos del grupo";
+            echo "No se han recuperar los datos del solista";
             exit();
           }
 
         ?>
         <form method="post">
           <fieldset>
-            <legend>Información del Solista</legend>
+            <legend>Información del solista</legend>
             <span>Nombre:</span><input value='<?php echo $nombre; ?>' type="text" name="nombre" required><br>
             <span>País:</span><input value='<?php echo $pais; ?>'type="text" name="pais" required><br>
             <span>Género:</span><input type="text" value='<?php echo $genero; ?>'name="genero" required><br>
-            <span>Fecha de Debut:</span><input type="date" name="fecha" value='<?php echo $fecha_debut; ?>'><br>
+            <span>Año de Debut:</span><input type="date" name="fecha_debut" value='<?php echo $fecha_debut; ?>'><br>
             <input type="hidden" name="id" value='<?php echo $id; ?>'>
             <p><input type="submit" value="Actualizar"></p>
           </fieldset>
@@ -104,7 +104,6 @@ span {
         $pais = $_POST["pais"];
         $genero = $_POST["genero"];
         $fecha_debut = $_POST["fecha_debut"];
-        $dni = $_POST["dni"];
 
         $connection = new mysqli("localhost", "root", "Admin2015", "proyecto", "3316");
         $connection->set_charset("uft8");
@@ -121,14 +120,14 @@ span {
         if ($result = $connection->query($query)) {
           echo "Datos actualizados <br>";
         } else {
-          echo "Error al actualizar los datos <br>";
+          echo "Error al actualizar los datos";
         }
 
         ?>
 
       <?php endif ?>
-
       <a href="editar_solistas.php"><input type="button" style="color: #FF0000" value="Volver"></a>
+
 
   </body>
 </html>

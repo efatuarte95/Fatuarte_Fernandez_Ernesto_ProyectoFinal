@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borrar Grupos</title>
+    <title>Borrar Canciones</title>
     <link rel="stylesheet" type="text/css" href=" ">
     <style></style>
   </head>
@@ -17,19 +17,19 @@
    }
 
      $id=$_GET['id'];
-     $consulta= "DELETE FROM grupos WHERE id_grupo='$id'";
+     $consulta= "DELETE FROM canciones WHERE id_cancion='$id'";
 
      $result = $connection->query($consulta);
 
      if (!$result) {
         echo "Query Error <br>";
      } else {
-         echo "Grupo eliminado <br>";
+         echo "Canción eliminada <br>";
      }
 
    ?>
 
-      <a href='borrar_grupos.php'><input type='button' style='color: #FF0000' value='Volver'></a>
+      <a href='borrar_canciones.php'><input type='button' style='color: #FF0000' value='Volver'></a>
 
 
   </body>

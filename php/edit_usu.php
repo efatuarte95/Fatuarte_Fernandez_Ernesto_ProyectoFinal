@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Sound System </title>
+    <title> Editar Usuarios </title>
     <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -17,7 +17,7 @@ html, body {
 }
 
 span {
-  width: 150px;
+  width: 180px;
   display: inline-block;
 }
 
@@ -41,7 +41,7 @@ span {
       <?php
 
         if (empty($_GET)) {
-          echo "No se han recibido datos del grupo";
+          echo "No se han recibido datos del usuario";
           exit();
         }
 
@@ -60,36 +60,40 @@ span {
               exit();
           }
 
-          $query="SELECT * from grupos where id_grupo='".$_GET["id"]."'";
+          $query="SELECT * from usuarios where id_usuario='".$_GET["id"]."'";
 
           if ($result = $connection->query($query))  {
 
             $obj = $result->fetch_object();
 
             if ($result->num_rows==0) {
-              echo "NO EXISTE ESE GRUPO";
+              echo "NO EXISTE ESE USUARIO";
               exit();
             }
 
-            $id = $obj->id_grupo;
-            $nombre = $obj->Nombre;
-            $pais = $obj->País;
-            $genero = $obj->Género;
-            $fecha_debut = $obj->Fecha_Debut;
+            $id = $obj->id_usuario;
+            $nombre_usuario = $obj->nombre_usuario;
+            $nombre = $obj->nombre;
+            $apellidos = $obj->apellidos;
+            $fecha_nacimiento = $obj->fecha_nacimiento;
+            $sexo = $obj->sexo;
+            $tipo = $obj->tipo;
 
           } else {
-            echo "No se han recuperar los datos del grupo";
+            echo "No se han recuperar los datos del usuario";
             exit();
           }
 
         ?>
         <form method="post">
           <fieldset>
-            <legend>Información del Grupo</legend>
-            <span>Nombre:</span><input value='<?php echo $nombre; ?>' type="text" name="nombre" required><br>
-            <span>País:</span><input value='<?php echo $pais; ?>'type="text" name="pais" required><br>
-            <span>Género:</span><input type="text" value='<?php echo $genero; ?>'name="genero" required><br>
-            <span>Fecha de Debut:</span><input type="date" name="fecha" value='<?php echo $fecha_debut; ?>'><br>
+            <legend>Información del usuario</legend>
+            <span>Nombre de Usuario:</span><input value='<?php echo $nombre_usuario; ?>' type="text" name="nombre_usuario" required><br>
+            <span>Nombre:</span><input value='<?php echo $nombre; ?>'type="text" name="nombre" required><br>
+            <span>Apellidos:</span><input value='<?php echo $apellidos; ?>' type="text" name="apellidos" required><br>
+            <span>Fecha de Nacimiento:</span><input value='<?php echo $fecha_nacimiento; ?>'type="date" name="fecha_nacimiento" required><br>
+            <span>Sexo:</span><input value='<?php echo $sexo; ?>' type="text" name="sexo" required><br>
+            <span>Tipo:</span><input value='<?php echo $tipo; ?>'type="text" name="tipo" required><br>
             <input type="hidden" name="id" value='<?php echo $id; ?>'>
             <p><input type="submit" value="Actualizar"></p>
           </fieldset>
@@ -100,13 +104,14 @@ span {
         <?php
 
         $id = $_POST["id"];
+        $nombre_usuario = $_POST["nombre_usuario"];
         $nombre = $_POST["nombre"];
-        $pais = $_POST["pais"];
-        $genero = $_POST["genero"];
-        $fecha_debut = $_POST["fecha_debut"];
-        $dni = $_POST["dni"];
+        $apellidos = $_POST["apellidos"];
+        $fecha_nacimiento = $_POST["fecha_nacimiento"];
+        $sexo = $_POST["sexo"];
+        $tipo = $_POST["tipo"];
 
-        $connection = new mysqli("192.168.1.30", "root", "Admin2015", "tf",3316);
+        $connection = new mysqli("localhost", "root", "Admin2015", "proyecto", "3316");
         $connection->set_charset("uft8");
 
         if ($connection->connect_errno) {
@@ -114,20 +119,21 @@ span {
             exit();
         }
 
-        $query="update grupos set Nombree='$nombre',
-        País='$pais',Género='$genero',Fecha_Debut='$fecha_debut'
-        WHERE id_grupo='$id'";
+        $query="update usuarios set nombre_usuario='$nombre_usuario',
+        fecha_nacimiento='$fecha_nacimiento', sexo='$sexo', tipo='$tipo', nombre='$nombre',
+        apellidos='$apellidos' WHERE id_usuario='$id'";
 
-        echo $query;
         if ($result = $connection->query($query)) {
-          echo "Datos actualizados";
+          echo "Usuario actualizado <br>";
         } else {
-          echo "Error al actualizar los datos";
+          echo "Error al actualizar los datos <br>";
         }
 
         ?>
 
       <?php endif ?>
+      <a href='inicio.php'><input type='button' style='color: #FF0000' value='Volver'></a>
+
 
   </body>
 </html>

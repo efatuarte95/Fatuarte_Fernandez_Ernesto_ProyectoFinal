@@ -1,10 +1,10 @@
 <?php
-    session_start();
+  session_start();
 ?>
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Editar Canciones </title>
+    <title> Borrar Usuarios </title>
     <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -15,16 +15,13 @@ html, body {
     padding: 0;
     margin: 0;
 }
-
 span {
   width: 150px;
   display: inline-block;
 }
-
 #inicio img {
   margin-top: 10px;
 }
-
 #img {
     z-index: -899;
     width: 100%;
@@ -35,6 +32,7 @@ span {
     opacity: 0.8;
 }
 </style>
+
 <body id="main">
   <img alt="full screen background image" src="../imagenes/admin.jpeg" id="img"/>
   <?php
@@ -47,7 +45,7 @@ span {
         exit();
     }
 
-    $query="SELECT * from canciones order by id_disco";
+    $query="SELECT * from usuarios";
 
     if ($result = $connection->query($query)) {
 
@@ -56,18 +54,26 @@ span {
           <thead>
             <tr>
               <th>ID</th>
+              <th>Nombre de Usuario</th>
               <th>Nombre</th>
-              <th>Duración</th>
+              <th>Apellidos</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Sexo</th>
+              <th>Tipo</th>
           </thead><br>
 
     <?php
 
         while($obj = $result->fetch_object()) {
             echo "<tr>";
-              echo "<td>".$obj->id_cancion."</a></td>";
+              echo "<td>".$obj->id_usuario."</td>";
+              echo "<td>".$obj->nombre_usuario."</td>";
               echo "<td>".$obj->nombre."</td>";
-              echo "<td>".$obj->duracion"</td>";
-              echo "<td><a href='edit_canciones.php?id=".$obj->id_cancion."'><img src='../imagenes/editar.jpeg' height='25' width='25'/></a></td>";
+              echo "<td>".$obj->apellidos."</td>";
+              echo "<td>".$obj->fecha_nacimiento."</td>";
+              echo "<td>".$obj->sexo."</td>";
+              echo "<td>".$obj->tipo."</td>";
+              echo "<td><a href='del_usuarios.php?id=".$obj->id_grupo."'><img src='../imagenes/delete.jpeg' height='25' width='25'/></a></td>";
             echo "</tr>";
 
         }

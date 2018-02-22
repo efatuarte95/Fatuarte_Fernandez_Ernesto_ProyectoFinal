@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Sound System </title>
+    <title> Añadir Solista </title>
     <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -15,12 +15,14 @@ html, body {
     padding: 0;
     margin: 0;
 }
-#inicio img {
-  margin-top: 10px;
-}
+
 span {
   width: 150px;
   display: inline-block;
+}
+
+#inicio img {
+  margin-top: 10px;
 }
 #img {
     z-index: -899;
@@ -39,10 +41,12 @@ span {
   if (!isset($_POST["name"])) : ?>
       <form method="post">
         <fieldset>
-          <legend>CANCIÓN</legend>
+          <legend>Añade los datos del nuevo grupo</legend>
           <span>Nombre:</span><input type="text" name="name" required><br>
-          <span>Duración:</span><input type="number" name="duracion" required><br>
-          <span><input type="submit" value="Insertar"><br>
+          <span>País:</span><input type="text" name="pais" required><br>
+          <span>Género:</span><input type="text" name="genero" required><br>
+          <span>Año de Debut:</span><input type="date" name="fecha_debut" required><br>
+          <span><input type="submit" value="Insertar">
         </fieldset>
       </form>
 
@@ -55,19 +59,25 @@ span {
         exit();
    }
 
-     $codigo=$_POST['name'];
-     $consulta= "INSERT INTO CANCIONES VALUES('$codigo','".$_POST['id']."','".$_POST['lastname']."')";
+     $name=$_POST['name'];
+     $pais=$_POST['pais'];
+     $genero=$_POST['genero'];
+     $fecha_debut=$_POST['fecha_debut'];
+     $consulta= "INSERT INTO solistas VALUES('','$name','$pais', '$genero', '$fecha_debut')";
 
      $result = $connection->query($consulta);
 
      if (!$result) {
-        echo "Query Error";
+        echo "Query Error <br>";
      } else {
-         echo "Nueva canción añadida";
+         echo "Nuevo solista añadido <br>";
      }
 
    ?>
 
     <?php endif ?>
+
+    <a href="solistas.php"><input type="button" style="color: #FF0000;" value="Volver"></a>
+
 </body>
 </html>

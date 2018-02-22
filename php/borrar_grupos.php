@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Sound System </title>
+    <title> Borrar Grupos </title>
     <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -35,9 +35,6 @@ span {
 
 <body id="main">
   <img alt="full screen background image" src="../imagenes/admin.jpeg" id="img"/>
-  <div class="container-fluid">
-    <?php if (isset($_SESSION["user"])&&($_SESSION["user"])=='administrador' )  :?>
-
   <?php
 
   $connection = new mysqli("localhost", "root", "Admin2015", "proyecto", "3316");
@@ -85,11 +82,6 @@ span {
   ?>
 </table>
   <a href='grupos.php'><input type='button' style='color: #FF0000' value='Volver'></a>
-<?php else: ?>
-  <h2>NO TIENES PERMISOS PARA ACCEDER AQUI</h2>
-
-<?php endif ?>
-</div>
 
 </body>
 </html>

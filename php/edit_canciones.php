@@ -1,49 +1,50 @@
-  <?php
-      session_start();
-  ?>
+<?php
+    session_start();
+?>
 <html>
 <head>
-      <meta charset="utf-8">
-      <title> Sound System </title>
-      <link rel="stylesheet" type="text/css" href="../css/inicio.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  </head>
-  <style type="text/css">
-  html, body {
-      height: 100%;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-  }
+    <meta charset="utf-8">
+    <title> Editar Canciones </title>
+    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<style type="text/css">
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
-  span {
-    width: 150px;
-    display: inline-block;
-  }
+span {
+  width: 150px;
+  display: inline-block;
+}
 
-  #inicio img {
-    margin-top: 10px;
-  }
+#inicio img {
+  margin-top: 10px;
+}
 
-  #img {
-      z-index: -899;
-      width: 100%;
-      height: auto;
-      position: fixed;
-      top: 0;
-      left: 0;
-      opacity: 0.8;
-  }
-  </style>
-  <body id="main">
-    <img alt="full screen background image" src="../imagenes/admin.jpeg" id="img"/>
+#img {
+    z-index: -899;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+</style>
+<body id="main">
+  <img alt="full screen background image" src="../imagenes/admin.jpeg" id="img"/>
 
-    <?php
+      <?php
 
         if (empty($_GET)) {
           echo "No se han recibido datos de la canción";
           exit();
         }
+
 
       ?>
 
@@ -70,23 +71,21 @@
               exit();
             }
 
-            $id = $obj->id_cancion;
+            $id = $obj->id_solista;
             $nombre = $obj->nombre;
             $duracion = $obj->duracion;
-            $id_disco = $obj->id_disco;
 
           } else {
-            echo "No se han recuperar los datos de la cancion";
+            echo "No se han recuperar los datos de la canción";
             exit();
           }
 
         ?>
         <form method="post">
           <fieldset>
-            <legend>Información de la Canción</legend>
+            <legend>Información de <?php  echo "$_GET[nombre]"; ?></legend>
             <span>Nombre:</span><input value='<?php echo $nombre; ?>' type="text" name="nombre" required><br>
-            <span>Duración:</span><input value='<?php echo $pais; ?>'type="text" name="pais" required><br>
-            <span>Disco:</span><input type="text" value='<?php echo $genero; ?>'name="genero" required><br>
+            <span>Duración:</span><input value='<?php echo $duracion; ?>'type="number" name="duracion" required><br>
             <input type="hidden" name="id" value='<?php echo $id; ?>'>
             <p><input type="submit" value="Actualizar"></p>
           </fieldset>
@@ -109,11 +108,10 @@
         }
 
         $query="update canciones set nombre='$nombre',
-        duracion='$duracion' WHERE id_grupo='$id'";
+        duracion='$duracion' WHERE id_solista='$id'";
 
-        echo $query;
         if ($result = $connection->query($query)) {
-          echo "Datos actualizados";
+          echo "Datos actualizados <br>";
         } else {
           echo "Error al actualizar los datos";
         }
@@ -121,6 +119,8 @@
         ?>
 
       <?php endif ?>
+      <a href="inicio.php"><input type="button" style="color: #FF0000" value="Volver"></a>
+
 
   </body>
 </html>

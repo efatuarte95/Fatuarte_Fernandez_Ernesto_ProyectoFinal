@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Sound System </title>
+    <title> Editar Usuarios </title>
     <link rel="stylesheet" type="text/css" href="../css/inicio.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
@@ -47,7 +47,7 @@ span {
         exit();
     }
 
-    $query="SELECT * from solistas";
+    $query="SELECT * from usuarios";
 
     if ($result = $connection->query($query)) {
 
@@ -56,22 +56,26 @@ span {
           <thead>
             <tr>
               <th>ID</th>
+              <th>Nombre de Usuario</th>
               <th>Nombre</th>
-              <th>País</th>
-              <th>Género</th>
-              <th>Fecha_Debut</th>
+              <th>Apellidos</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Sexo</th>
+              <th>Tipo</th>
           </thead><br>
 
     <?php
 
         while($obj = $result->fetch_object()) {
             echo "<tr>";
-              echo "<td><a href='edit_solistas.php?id=".$obj->id_solista.
-              "'>".$obj->id_solista."</a></td>";
+              echo "<td>".$obj->id_usuario."</td>";
+              echo "<td>".$obj->nombre_usuario."</td>";
               echo "<td>".$obj->nombre."</td>";
-              echo "<td>".$obj->pais."</td>";
-              echo "<td>".$obj->genero."</td>";
-              echo "<td>".$obj->fecha_debut."</td>";
+              echo "<td>".$obj->apellidos."</td>";
+              echo "<td>".$obj->fecha_nacimiento."</td>";
+              echo "<td>".$obj->sexo."</td>";
+              echo "<td>".$obj->tipo."</td>";
+              echo "<td><a href='edit_usu.php?id=".$obj->id_usuario."'><img src='../imagenes/editar.jpeg' height='25' width='25'/></a></td>";
             echo "</tr>";
 
         }
@@ -83,7 +87,7 @@ span {
     }
   ?>
 </table>
-  <a href='canciones.php'><input type='button' style='color: #FF0000' value='Volver'></a>
+  <a href='inicio.php'><input type='button' style='color: #FF0000' value='Volver'></a>
 
 </body>
 </html>

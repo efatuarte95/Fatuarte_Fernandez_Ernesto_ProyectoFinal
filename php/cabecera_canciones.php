@@ -13,9 +13,9 @@
       <a href="grupos.php">Grupos</a>
     </div>
     <div class="col-md-2">
-      <a href="add_cancion.php" style="margin-left: 5px;"><img src="../imagenes/add.jpeg" height="25" width="25"/></a>
-      <a href="del_cancion.php" style="margin-left: 15px;"><img src="../imagenes/del.jpeg" height="25" width="25"/></a>
-      <a href="editar_cancion.php" style="margin-left: 15px;"><img src="../imagenes/edit.jpeg" height="25" width="25"/></a>
+      <a href="add_canciones.php" style="margin-left: 5px;"><img src="../imagenes/add.jpeg" height="25" width="25"/></a>
+      <a href="borrar_canciones.php" style="margin-left: 15px;"><img src="../imagenes/del.jpeg" height="25" width="25"/></a>
+      <a href="editar_canciones.php" style="margin-left: 15px;"><img src="../imagenes/edit.jpeg" height="25" width="25"/></a>
     </div>
     <div class="col-md-2 offset">
       <a href="portada.php" id="logoff">Log Off</a>
