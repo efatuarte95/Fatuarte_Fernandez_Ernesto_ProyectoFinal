@@ -5,63 +5,17 @@
 <head>
     <meta charset="utf-8">
     <title> Sound System </title>
-    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="../css/canciones.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
-<style type="text/css">
-html, body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-#inicio img {
-  margin-top: 10px;
-}
-#img {
-    z-index: -999;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-}
-#menu {
-  background-color: black;
-}
-
-#menu div {
-  text-align: center;
-  font-size: 25px;
-}
-
-#logoff {
-  font-size: 25px;
-  text align: right;
-}
-
-#generos img {
-  height: 220px;
-  width: 220px;
-}
-
-#solistas img {
-  height: 220px;
-  width: 220px;
-}
-
-#grupos img {
-  height: 220px;
-  width: 220px;
-}
+<style type="text/css" >
 </style>
 
 <body id="main">
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
   <?php
     if ($_SESSION["tipo"]=='Administrador') {
-      include("cabecera_grupos.php");
+      include("cabecera_canciones.php");
     } else {
       include("cabecera.php");
     }
@@ -77,7 +31,7 @@ html, body {
         exit();
     }
 
-    $query="SELECT * from grupos";
+    $query="SELECT * from canciones where id_disco='".$_GET["id"]."'";
 
     if ($result = $connection->query($query)) {
 
@@ -86,10 +40,7 @@ html, body {
           <thead>
             <tr>
               <th>Nombre</th>
-              <th>País</th>
-              <th>Género</th>
-              <th>Año_Debut</th>
-              <th>Portada</th>
+              <th>Duración</th>
           </thead><br>
 
     <?php
@@ -97,10 +48,7 @@ html, body {
         while($obj = $result->fetch_object()) {
             echo "<tr>";
               echo "<td>".$obj->nombre."</td>";
-              echo "<td>".$obj->pais."</td>";
-              echo "<td>".$obj->genero."</td>";
-              echo "<td>".$obj->fecha_debut."</td>";
-              echo "<td><a href='discos_grupos.php?id=".$obj->id_grupo."'><img src='$obj->portada' height='50' width='50'/></a></td>";
+              echo "<td>".$obj->duracion."</td>";
             echo "</tr>";
 
         }

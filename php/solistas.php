@@ -61,121 +61,59 @@ html, body {
   <img alt="full screen background image" src="../imagenes/portada.jpeg" id="img"/>
   <?php
     if ($_SESSION["tipo"]=='Administrador') {
-      include("cabecera_solistas.php");
+      include("cabecera_grupos.php");
     } else {
       include("cabecera.php");
     }
   ?>
-    <div class="container-fluid mt-2">
-      <div class="row" id="grupos">
-        <div class="col-md-2 offset-md-2">
-          <a href="plantilla_solistas.php?id=1">
-          <div class="row">
-            <img class="w-100" src="../imagenes/solistas/eminem.jpeg"/>
-          </div>
-          <div class="row justify-content-center ">
-            <div class="col-auto">
-              <p > Eminem </p>
-            </div>
-          </div></a>
-        </div>
-        <div class="col-md-2 offset-md-1">
-        <a href="plantilla_solistas.php?id=2">
-        <div class="row">
-            <img class="w-100" src="../imagenes/solistas/sanz.jpeg"/>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-auto">
-            <p > Alejandro Sanz </p>
-          </div>
-        </div></a>
-      </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="plantilla_solistas.php?id=3">
-        <div class="row">
-          <img class="w-100" src="../imagenes/solistas/madonna.jpeg"/>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-auto">
-            <p > Madonna </p>
-          </div>
-        </div></a>
-      </div>
-    </div>
-    <div class="row" id="grupos">
-      <div class="col-md-2 offset-md-2">
-        <a href="plantilla_solistas.php?id=4">
-        <div class="row">
-          <img class="w-100" src="../imagenes/solistas/lennon.jpeg"/>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-auto">
-            <p > John Lennon </p>
-          </div>
-        </div></a>
-      </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="plantilla_solistas.php?id=5">
-        <div class="row">
-          <img class="w-100" src="../imagenes/solistas/marley.jpeg"/>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-auto">
-            <p > Bob Marley </p>
-          </div>
-        </div></a>
-      </div>
-      <div class="col-md-2 offset-md-1">
-        <a href="plantilla_solistas.php?id=6">
-        <div class="row">
-          <img class="w-100" src="../imagenes/solistas/alboran.jpeg"/>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-auto">
-            <p > Pablo Alborán </p>
-          </div>
-        </div></a>
-      </div>
-    </div>
-  <div class="row" id="grupos">
-    <div class="col-md-2 offset-md-2">
-      <a href="plantilla_solistas.php?id=7">
-      <div class="row">
-        <img class="w-100" src="../imagenes/solistas/jackson.jpeg"/>
-      </div>
-      <div class="row justify-content-center ">
-        <div class="col-auto">
-          <p > Michael Jackson </p>
-        </div>
-      </div></a>
-    </div>
-    <div class="col-md-2 offset-md-1">
-      <a href="plantilla_solistas.php?id=8">
-      <div class="row">
-        <img class="w-100" src="../imagenes/solistas/amy.jpeg"/>
-      </div>
-      <div class="row justify-content-center ">
-        <div class="col-auto">
-          <p > Amy Winehouse </p>
-        </div>
-      </div></a>
-    </div>
-    <div class="col-md-2 offset-md-1">
-      <a href="plantilla_solistas.php?id=9">
-      <div class="row">
-        <img class="w-100" src="../imagenes/solistas/adams.jpeg"/>
-      </div>
-      <div class="row justify-content-center ">
-        <div class="col-auto">
-          <p > Bryan Adams </p>
-        </div>
-      </div></a>
-    </div>
-  </div>
-</div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+  <?php
+
+  $connection = new mysqli("localhost", "root", "Admin2015", "proyecto", "3316");
+    $connection->set_charset("uft8");
+
+    if ($connection->connect_errno) {
+        printf("Connection failed: %s\n", $connection->connect_error);
+        exit();
+    }
+
+    $query="SELECT * from solistas";
+
+    if ($result = $connection->query($query)) {
+
+    ?>
+        <table style="border:1px solid black">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>País</th>
+              <th>Género</th>
+              <th>Año_Debut</th>
+              <th>Portada</th>
+          </thead><br>
+
+    <?php
+
+        while($obj = $result->fetch_object()) {
+            echo "<tr>";
+              echo "<td>".$obj->nombre."</td>";
+              echo "<td>".$obj->pais."</td>";
+              echo "<td>".$obj->genero."</td>";
+              echo "<td>".$obj->fecha_debut."</td>";
+              echo "<td><a href='discos_solistas.php?id=".$obj->id_solista."'><img src='$obj->portada' height='50' width='50'/></a></td>";
+            echo "</tr>";
+
+        }
+
+        $result->close();
+        unset($obj);
+        unset($connection);
+
+    }
+  ?>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
 </html>

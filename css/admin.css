@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+span {
+  width: 150px;
+  display: inline-block;
+}
+
+#inicio img {
+  margin-top: 10px;
+}
+#img {
+    z-index: -899;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}

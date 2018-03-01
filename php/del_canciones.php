@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Borrar Canciones</title>
-    <link rel="stylesheet" type="text/css" href=" ">
-    <style></style>
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+  <style></style>
   </head>
   <body>
 

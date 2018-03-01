@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#inicio img {
+  margin-top: 10px;
+}
+#img {
+    z-index: -999;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+#menu {
+  background-color: black;
+}
+
+#menu div {
+  text-align: center;
+  font-size: 25px;
+}
+
+#logoff {
+  font-size: 25px;
+  text align: right;
+}
+
+#generos img {
+  height: 220px;
+  width: 220px;
+}
+
+#solistas img {
+  height: 220px;
+  width: 220px;
+}
+
+#grupos img {
+  height: 220px;
+  width: 220px;
+}

@@ -5,32 +5,11 @@
 <head>
     <meta charset="utf-8">
     <title> Borrar Canciones </title>
-    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <style type="text/css">
-html, body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-span {
-  width: 150px;
-  display: inline-block;
-}
-#inicio img {
-  margin-top: 10px;
-}
-#img {
-    z-index: -899;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-}
+
 </style>
 
 <body id="main">
@@ -45,7 +24,7 @@ span {
         exit();
     }
 
-    $query="SELECT * from canciones order by id_disco";
+    $query="SELECT * from canciones group by id_grupo";
 
     if ($result = $connection->query($query)) {
 
@@ -55,7 +34,7 @@ span {
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Duración</th>
+              <th>Duracion</th>
           </thead><br>
 
     <?php
@@ -65,7 +44,7 @@ span {
               echo "<td>".$obj->id_cancion."</td>";
               echo "<td>".$obj->nombre."</td>";
               echo "<td>".$obj->duracion."</td>";
-              echo "<td><a href='del_canciones.php?id=".$obj->id_grupo."'><img src='../imagenes/delete.jpeg' height='25' width='25'/></a></td>";
+              echo "<td><a href='del_canciones.php?id=".$obj->id_cancion."'><img src='../imagenes/delete.jpeg' height='25' width='25'/></a></td>";
             echo "</tr>";
 
         }
@@ -77,7 +56,7 @@ span {
     }
   ?>
 </table>
-  <a href='canciones.php'><input type='button' style='color: #FF0000' value='Volver'></a>
+  <a href='inicio.php'><input type='button' style='color: #FF0000' value='Volver'></a>
 
 </body>
 </html>
